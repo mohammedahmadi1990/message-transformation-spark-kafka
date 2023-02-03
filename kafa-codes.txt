@@ -1,0 +1,19 @@
+cmd1 kafka root:
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+cmd2 kafka root:
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+cmd3 in windows dir:
+kafka-topics.bat --create --bootstrap-server localhost:9092 --topic test
+
+
+cmd3 windows dir
+kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+
+cm5 windows dir
+kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
+
+
+
